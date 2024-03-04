@@ -49,59 +49,159 @@
             }
             
             @keyframes glitch-color {
-               0% {
-                  transform: translate(0);
-               }
-            
-               20% {
-                  transform: translate(-3px, 3px);
-               }
-            
-               40% {
-                  transform: translate(-3px, -3px);
-               }
-            
-               60% {
-                  transform: translate(3px, 3px);
-               }
-            
-               80% {
-                  transform: translate(3px, -3px);
-               }
-            
-               to {
-                  transform: translate(0);
-               }
+               0% { transform: translate(0); }
+               20% { transform: translate(-3px, 3px); }
+               40% { transform: translate(-3px, -3px); }
+               60% { transform: translate(3px, 3px); }
+               80% { transform: translate(3px, -3px); }
+               to { transform: translate(0); }
             }
-            </style>
+
+
+            .circles{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .circles li{
+                position: absolute;
+                display: block;
+                list-style: none;
+                width: 20px;
+                height: 20px;
+                background: rgba(255, 255, 255, 0.2);
+                animation: animate 25s linear infinite;
+                bottom: -150px;
+                
+            }
+
+            .circles li:nth-child(1){
+                left: 25%;
+                width: 80px;
+                height: 80px;
+                animation-delay: 0s;
+            }
+
+
+            .circles li:nth-child(2){
+                left: 10%;
+                width: 20px;
+                height: 20px;
+                animation-delay: 2s;
+                animation-duration: 12s;
+            }
+
+            .circles li:nth-child(3){
+                left: 70%;
+                width: 20px;
+                height: 20px;
+                animation-delay: 4s;
+            }
+
+            .circles li:nth-child(4){
+                left: 40%;
+                width: 60px;
+                height: 60px;
+                animation-delay: 0s;
+                animation-duration: 18s;
+            }
+
+            .circles li:nth-child(5){
+                left: 65%;
+                width: 20px;
+                height: 20px;
+                animation-delay: 0s;
+            }
+
+            .circles li:nth-child(6){
+                left: 75%;
+                width: 110px;
+                height: 110px;
+                animation-delay: 3s;
+            }
+
+            .circles li:nth-child(7){
+                left: 35%;
+                width: 150px;
+                height: 150px;
+                animation-delay: 7s;
+            }
+
+            .circles li:nth-child(8){
+                left: 50%;
+                width: 25px;
+                height: 25px;
+                animation-delay: 15s;
+                animation-duration: 45s;
+            }
+
+            .circles li:nth-child(9){
+                left: 20%;
+                width: 15px;
+                height: 15px;
+                animation-delay: 2s;
+                animation-duration: 35s;
+            }
+
+            .circles li:nth-child(10){
+                left: 85%;
+                width: 150px;
+                height: 150px;
+                animation-delay: 0s;
+                animation-duration: 11s;
+            }
+
+            @keyframes animate {
+
+                0%{
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                    border-radius: 0;
+                }
+
+                100%{
+                    transform: translateY(-1000px) rotate(720deg);
+                    opacity: 0;
+                    border-radius: 50%;
+                }
+
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background:#191b60;">
             <div class="container">
                 <a class="navbar-brand" href="#page-top">Xavier Ulysses Atabay</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu 
                     <i class="fas fa-bars"></i>
                 </button>
-                <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                        <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li> -->
                     </ul>
-                </div> -->
+                </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center" style="background: #2b2f77;
-        background: -webkit-linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);
-        background: linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);">
+        <header class="masthead bg-primary text-white text-center" 
+            style="background: #ffffff;
+            background: -webkit-linear-gradient(0deg, #ffffff 0%, #464c97 50%, #09094c 100%);
+            background: linear-gradient(0deg, #ffffff 0%, #464c97 50%, #09094c 100%);"
+            >
             <div class="container d-flex align-items-center flex-column" >
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/x.png" alt="..."  style="border-radius: 50%;"/>
+                <img class="masthead-avatar mb-5" src="assets/img/x.png" alt="..."  style="border-radius: 50%; border-style: solid; border-color: white;"/>
                 <!-- Masthead Heading-->
-                <div class="glitch" data-glitch="XAVIER ULYSSES ATABAY"><h1 class="masthead-heading text-uppercase mb-0">Xavier Ulysses Atabay</h1></div>
+                <h1 class="masthead-heading text-uppercase mb-0">Xavier Ulysses Atabay</h1>
+                <!-- <div class="glitch" data-glitch="XAVIER ULYSSES ATABAY"><h1 class="masthead-heading text-uppercase mb-0">Xavier Ulysses Atabay</h1></div> -->
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -109,14 +209,15 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">FULL STACK DEVELOPER - PHP (LARAVEL/CODEIGNITER) - VUEJS - HTML - CSS - MYSQL - WORDPRESS - SHOPIFY</p>
+                <p class="masthead-subheading font-weight-light mb-0" style="color: #1b1c62;">FULL STACK DEVELOPER - PHP (LARAVEL/CODEIGNITER) - VUEJS - HTML - CSS - MYSQL - WORDPRESS - SHOPIFY</p>
             </div>
         </header>
         <!-- Portfolio Section-->
-        <!-- <section class="page-section portfolio" id="portfolio">
+        <section class="page-section portfolio" id="portfolio">
+            <ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
             <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-                <div class="divider-custom">
+                <h2 class="page-section-heading text-center text-uppercase mb-0" style="color: #0b0f3d;">Portfolio</h2>
+                <div class="divider-custom" >
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
@@ -127,7 +228,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/boostedadvertising.png" alt="..." />
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
@@ -135,7 +236,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/cjcecobag.png" alt="..." />
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
@@ -143,10 +244,10 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/alturush.png" alt="..." />
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <!-- <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
@@ -169,12 +270,27 @@
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- About Section-->
-        <!-- <section class="page-section bg-primary text-white mb-0" id="about">
+        <!-- <section class="page-section bg-primary text-white mb-0" id="about"
+            style="background-image: linear-gradient(
+                0deg, hsl(0deg 0% 100%) 0%,
+                hsl(236deg 89% 93%) 5%, hsl(236deg 89% 85%) 9%,
+                hsl(236deg 88% 78%) 14%, hsl(236deg 88% 71%) 18%,
+                hsl(236deg 88% 64%) 23%, hsl(237deg 88% 56%) 27%,
+                hsl(237deg 88% 49%) 32%, hsl(237deg 88% 42%) 36%,
+                hsl(237deg 89% 35%) 41%, hsl(237deg 88% 27%) 45%,
+                hsl(237deg 88% 20%) 50%, hsl(237deg 88% 27%) 55%,
+                hsl(237deg 89% 35%) 59%, hsl(237deg 88% 42%) 64%,
+                hsl(237deg 88% 49%) 68%, hsl(237deg 88% 56%) 73%,
+                hsl(236deg 88% 64%) 77%, hsl(236deg 88% 71%) 82%,
+                hsl(236deg 88% 78%) 86%, hsl(236deg 89% 85%) 91%,
+                hsl(236deg 89% 93%) 95%, hsl(0deg 0% 100%) 100%
+            );"
+        >
             <div class="container">
                 <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
                 <div class="divider-custom divider-light">
@@ -183,13 +299,15 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div class="col"><p class="lead"></nbsp>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
                 </div>
+                <div class="row">
+                    <div class="col"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    </div>
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                    <a class="btn btn-xl btn-outline-light" href="">
                         <i class="fas fa-download me-2"></i>
-                        Free Download!
+                        Download
                     </a>
                 </div>
             </div>
@@ -197,7 +315,7 @@
         <!-- Contact Section-->
         <!-- <section class="page-section" id="contact">
             <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+                <h2 class="page-section-heading text-center text-uppercase mb-0" style="color: #0b0f3d;">Contact Me</h2>
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -205,7 +323,8 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                        <form id="contactForm" method="post" data-sb-form-api-token="API_TOKEN" action="">
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
@@ -230,52 +349,53 @@
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <button class="btn btn-xl" style="color: #0d094c;" id="submitButton" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section> -->
         <!-- Footer-->
-        <!-- <footer class="footer text-center">
+        <footer class="footer text-center"  
+            style="background: #0d094c;
+            background: -webkit-linear-gradient(0deg, #0d094c 0%, #434a9d 50%, #ffffff 100%);
+            background: linear-gradient(0deg, #0d094c 0%, #434a9d 50%, #ffffff 100%);"
+            >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <!-- <h4 class="text-uppercase mb-4">Location</h4>
                         <p class="lead mb-0">
                             2215 John Daniel Drive
                             <br />
                             Clark, MO 65243
-                        </p>
+                        </p> -->
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/BruhG0d"><i class="fab fa-fw fa-github"></i></a>
                     </div>
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <!-- <h4 class="text-uppercase mb-4">About Freelancer</h4>
                         <p class="lead mb-0">
                             Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            <a href=""></a>
                             .
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
         <!-- Copyright Section-->
-        <!-- <div class="copyright py-4 text-center text-white">
+        <div class="copyright py-4 text-center text-white" style="background:#0e0a4d;">
             <div class="container"><small>Copyright &copy; 2024</small></div>
-        </div> -->
+        </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
@@ -287,7 +407,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">BoostedAdvertising.com</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -295,13 +415,15 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/boostedadvertising.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <p class="mb-4">
+                                        Boosted Advertising Services is a Facebook ads agency that helps businesses grow and manage their Facebook advertising campaigns since January of 2019. Started as a humble team of five and is continually growing. Believes in the importance of supporting local businesses and entrepreneurs, especially SMMEs, growing the company together with the partners. Creates outstanding and engaging ad creatives and low-cost ad campaigns, precisely targeting and generating a continuous flow of real customers.
+                                    </p>
+                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -319,7 +441,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">CJCECOBAG.COM</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -327,13 +449,13 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cjcecobag.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
@@ -351,7 +473,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Alturush.com</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -359,13 +481,13 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/alturush.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <!-- <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                         </div>
